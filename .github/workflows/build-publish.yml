@@ -86,6 +86,7 @@ jobs:
           GOARCH: ${{ matrix.goarch }}
           GOARM: ${{ matrix.goarm }}
           CGO_ENABLED: 0
+          GOWORK: "off"
           FULL_VER: ${{ steps.ver.outputs.version }}
         run: |
           mkdir -p dist
